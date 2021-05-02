@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./public/style.css">
+        <title></title>
+    </head> 
+    <body>
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="" id="navbar__logo">GENERAL CAR SHOP</a>
+            <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="/index" class="navbar__links">Home</a>
+              </li> 
+              <li class="navbar__item">
+                <a href="" class="navbar__links">About Us</a>
+              </li>
+              <li class="navbar__item">
+                <a href="/car" class="navbar__links">New Cars</a>
+              </li> 
+              <li class="navbar__item">
+                <a href="#" class="navbar__links">Contact </a>
+              </li>
+              {{!-- <li class="navbar__btn">
+                <a href="sign/signin.html" class="button">Sign In</a>
+              </li> --}}
+            </ul>
+        </div>
+    </nav>
+
+
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+    <!-- Slides display of three cars -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./public/gallery/car1.png" style="width:60%">
+      <div class="text">Toyota</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./public/gallery/car2.jpg" style="width:60%">
+      <div class="text">Suzuki</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 /3</div>
+      <img src="./public/gallery/car3.jpg" style="width:60%">
+      <div class="text">Mitsubishi</div>
+    </div>
+
+    <!--Display of different cars-->
+
+    <div class="gallery">
+      <a href="/productdetails1">
+        <img src="./public/gallery/car1.png" width= "100%">
+      </a>
+      <h4>Toyota Yaris </h4>
+      <p>€10,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails2">
+        <img src="./public/gallery/car2.jpg" width="100%">
+      </a>
+      <h4>Sukuki grand vitara</h4>
+    <p>€12,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails3">
+        <img src="./public/gallery/car3.jpg" width="100%">
+      </a>
+      <h4>Mitsubishi</h4>
+      <p>€15,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails4">
+        <img src="./public/gallery/car4.jpeg" width="100%">
+      </a>
+      <h4>Mercedes</h4>
+    <p>€9,000</p>
+    </div>
+   <div class="gallery">
+      <a href="/productdetails5">
+        <img src="./public/gallery/car5.jpg" width="100%">
+      </a>
+      <h4>Nissan murano</h4>
+    <p>€11,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails6">
+        <img src="./public/gallery/car6.jpg" width="100%">
+      </a>
+      <h4>Bmw</h4>
+    <p>€10,00</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails7">
+        <img src="./public/gallery/car7.jpg" width="100%">
+      </a>
+      <h4>Audi</h4>
+    <p>€9,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails8">
+        <img src="./public/gallery/car8.jpg" width="100%">
+      </a>
+      <h4>Ford</h4>
+    <p>€8,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails9">
+        <img src="./public/gallery/car9.jpg" width="100%">
+      </a>
+      <h4>Opel</h4>
+    <p>€6,000</p>
+    </div>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails10">
+        <img src="./public/gallery/car10.png" width="100%">
+      </a>
+      <h4>Honda</h4>
+      <p>€9,000</p>
+    </div>
+    <div class="gallery">
+      <a href="/productdetails11">
+        <img src="./public/gallery/Nissan_Murano.png" width="100%">
+      </a>
+      <h4>Nissan murano</h4>
+    <p>€10,000</p>
+    </div>
+<div class="gallery">
+      <a href="/productdetails12">
+        <img src="./public/gallery/toyota RAV4.jpg" width="100%">
+      </a>
+      <h4>Toyota RAV4</h4>
+    <p>€8,000</p>
+    </div>
+  <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // This is to change the image every 2 seconds
+}
+    </script>
+    </body>
+    </html>
+
+
+    
+
+

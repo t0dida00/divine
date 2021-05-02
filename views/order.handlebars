@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The GeneralCar Shop</title>
+    <link rel="stylesheet" href="./public/order.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+       <nav class="navbar">
+        <div class="navbar__container">
+            <a href="" id="navbar__logo">GENERAL CAR SHOP</a>
+            <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="/index" class="navbar__links">Home</a>
+              </li> 
+              <li class="navbar__item">
+                <a href="" class="navbar__links">About Us</a>
+              </li>
+              <li class="navbar__item">
+                <a href="/car" class="navbar__links">New Cars</a>
+              </li> 
+              <li class="navbar__item">
+                <a href="#" class="navbar__links">Contact </a>
+              </li>
+              {{!-- <li class="navbar__btn">
+                <a href="sign/signin.html" class="button">Sign In</a>
+              </li> --}}
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--order form-->
+    <form action="order" method="post">
+      <table>
+          <tr>
+              <td>
+                  First Name :
+              </td>
+              <td>
+                  <input type="text" placeholder="Chapal" name="first_name">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Last Name :
+              </td>
+              <td>
+                  <input type="text" placeholder="Shaik" name="last_name">
+              </td>
+          </tr>
+       
+      
+          <tr>
+              <td>
+                  Email :
+              </td>
+              <td>
+                  <input type="text" placeholder="abc@generalcar.com" name="email">
+              </td>
+          </tr>
+          <td>
+              Phone :
+          </td>
+          <td>
+              
+              <input type="number" placeholder="45166****" name="phone">
+          
+          </td>  
+          
+      <tr>
+          <tr>
+
+              <td>
+                  Adress :
+              </td>
+              <td>
+                  <input type="text" placeholder="General car Shop" name="address1">
+                  <select name="address2" id="">
+                      <option value="Oulu">Oulu</option>
+                      <option value="Helsinki">Helsinki</option>
+                      <option value="Stockholm">Stockholm</option>
+                      <option value="Rome">Rome</option>
+                  </select>
+                  <select name="code" id="">
+                      <option value="90570">90570</option>
+                      <option value="90100">90100</option>
+                      <option value="607901">607901</option>
+                      <option value="80956">80956</option>
+                  </select>
+              </td>
+                
+          </tr>
+          <tr>
+              <td>
+                  Country :
+              </td>
+              <td>
+                  <select name="country" id="">
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Finland">Finland</option>
+                      <option value="Norway">Norway</option>
+                      <option value="Estonia">Estonia</option>
+                      <option value="Denmark">Denmark</option>
+                      <option value="Sweden">Sweden</option>
+                      <option value="India">India</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Italy">Italy</option>
+                  </select>
+              </td>  
+          </tr>
+          {{!-- <tr>
+              <td>
+                  Select Car :
+              </td>
+              <td>
+                  <select name="" id="">
+                      <option value="">Toyota Yaris</option>
+                      <option value="">Sukuki grand vitara</option>
+                      <option value="">Mitsubishi</option>
+                      <option value="">Mercedes</option>
+                      <option value="">Nissan murano</option>
+                      <option value="">Smw</option>
+                      <option value="">Audi</option>
+                      <option value="">Ford</option>
+                      <option value="">Opel</option>
+                      <option value="">Honda</option>
+                      <option value="">Nissan murano</option>
+                      <option value="">Toyota RAV4</option
+                  </select>
+              </td>  
+          </tr>
+          <tr>
+              <td>
+                 Car Price :
+              </td>
+              <td>
+                  <select name="" id="">
+                      <option value="">€10,000</option>
+                      <option value="">€12,000</option>
+                      <option value="">€15,000</option>
+                      <option value="">€9,000</option>
+                      <option value="">€11,000</option>
+                      <option value="">€10,000</option>
+                      <option value="">€9,000</option>
+                      <option value="">€8,000</option>
+                      <option value="">€6,000</option>
+                      <option value="">€5,000</option>
+                      <option value="">€13,000</option>
+                      <option value="">€9,500</option
+                  </select>
+              </td>  
+          </tr> --}}
+          <input type="hidden" name="nameCar" id="nameCar">
+            <input type="hidden" name="priceCar" id="priceCar">
+          <tr>
+              <td>
+                  Place your order:
+              </td>
+              <td>
+                  <input class="form__button" type="Submit" value="Submit" name="">
+              </td>
+          </tr>
+          {{!-- <td>
+            Are you ready to pay :
+        </td>
+        <td>
+            <button class="form__button"><a href="payment.html">Pay Now</a></button>
+        </td> --}}
+    </tr>
+    
+      </table>
+  </form>
+ 
+    <script src="./public/app.js"></script>
+    <script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const namePrice = urlParams.get('nameCar')
+console.log(namePrice);
+// shirt
+
+const priceCar = urlParams.get('priceCar')
+console.log(priceCar);
+
+document.getElementById('nameCar').value=namePrice;
+document.getElementById('priceCar').value=priceCar;
+    </script>
+</body>
+</html>

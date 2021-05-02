@@ -1,0 +1,27 @@
+body{
+    background-color: #131313;
+}
+#title{
+    padding-left: 5%;
+    color: #ff8177;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+#instructions{
+    margin-left: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+#CustomerInfo{
+    font-size: 18px;
+    color: white;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.footer__container{
+    position: relative;
+    margin-top: 300px;
+}
+#bankCard {
+    width: 150px;
+    height: 100px;
+}
